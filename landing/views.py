@@ -16,8 +16,8 @@ def news_detail(request, pk):
     news_item = get_object_or_404(PressRelease, pk=pk)
     return render(request, 'landing/news_detail.html', {'news_item': news_item})
 
-def partners_view(request):
-    return render(request, 'landing/partners.html')
+def education_view(request):
+    return render(request, 'landing/education.html')
 
 def contacts_view(request):
     return render(request, 'landing/contacts.html')
