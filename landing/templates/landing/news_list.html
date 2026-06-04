@@ -1,0 +1,32 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block content %}
+<main>
+    <section class="hero" style="padding: 6rem 0; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);">
+        <div class="container" style="position: relative; z-index: 2;">
+            <h1 style="font-weight: 600;">Пресс-центр</h1>
+            <p style="opacity: 0.9;">Официальные новости, события и пресс-релизы Федерации</p>
+        </div>
+    </section>
+
+    <section class="section container">
+        <div class="news-grid">
+            {% for item in news %}
+            <article class="news-card">
+                {% if item.images.exists %}
+                    <img src="{{ item.images.first.image.url }}" alt="Новость" class="news-card-img">
+                {% endif %}
+                <div class="news-card-content">
+                    <div class="news-date">{{ item.date|date:"d E Y" }}</div>
+                    <h3 class="news-title">{{ item.title }}</h3>
+                    <a href="{% url 'news_detail' item.id %}" class="news-read-more">Читать полностью &rarr;</a>
+                </div>
+            </article>
+            {% empty %}
+            <p>Пресс-релизов пока нет.</p>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Topics Section -->
+<section id="topics" class="section topics-section bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">Обсуждаемые темы</h2>
+        <div class="topics-grid">
+            <div class="topic-card">
+                <div class="topic-icon">📋</div>
+                <h3>Сложные вопросы детской реабилитации</h3>
+            </div>
+            <div class="topic-card">
+                <div class="topic-icon">🏥</div>
+                <h3>Инновации в реабилитации</h3>
+            </div>
+            <div class="topic-card">
+                <div class="topic-icon">🤝</div>
+                <h3>Международный опыт</h3>
+            </div>
+            <div class="topic-card">
+                <div class="topic-icon">⚖️</div>
+                <h3>Правовое регулирование</h3>
+            </div>
+            <div class="topic-card">
+                <div class="topic-icon">🎓</div>
+                <h3>Образование и кадры</h3>
+            </div>
+            <div class="topic-card">
+                <div class="topic-icon">🤖</div>
+                <h3>Роботизированная терапия</h3>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

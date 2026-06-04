@@ -1,0 +1,25 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Partners Section -->
+<section id="partners" class="section partners-section">
+    <div class="container">
+        <h2 class="section-title text-center">Партнеры</h2>
+        <div class="partners-grid justify-content-center">
+            <div class="partner-logo">
+                <img src="{% static 'images/partner_1.jpeg' %}" alt="BTL Kazakhstan">
+            </div>
+            <div class="partner-logo">
+                <img src="{% static 'images/partner_2.jpg' %}" alt="Prof Med">
+            </div>
+            <div class="partner-logo">
+                <img src="{% static 'images/partner_3.jpg' %}" alt="ITO Co Ltd">
+            </div>
+            <div class="partner-logo">
+                <img src="{% static 'images/partner_4.jpg' %}" alt="Beka Rus">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

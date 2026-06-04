@@ -1,0 +1,30 @@
+{% extends 'landing/base.html' %}
+
+{% block content %}
+<main class="container">
+    <article class="article-detail">
+        <header class="article-header">
+            <div class="news-date" style="font-size: 1rem; margin-bottom: 1rem;">{{ news_item.date|date:"d E Y" }}</div>
+            <h1 class="article-title">{{ news_item.title }}</h1>
+        </header>
+        <div class="article-content">
+{{ news_item.content|linebreaks }}
+        </div>
+        
+        {% if news_item.images.exists %}
+        <div class="news-gallery">
+            <h3 style="margin-bottom: 2rem; border-bottom: 2px solid var(--border); padding-bottom: 1rem;">Фотогалерея</h3>
+            <div class="gallery-grid">
+                {% for img in news_item.images.all %}
+                <img src="{{ img.image.url }}" alt="Фото с мероприятия" class="gallery-img">
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        
+        <div style="margin-top: 4rem; text-align: center;">
+            <a href="{% url 'news_list' %}" class="btn btn-primary">&larr; Назад к новостям</a>
+        </div>
+    </article>
+</main>
+{% endblock %}

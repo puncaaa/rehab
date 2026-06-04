@@ -1,0 +1,76 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block content %}
+<main>
+    <section class="hero" style="background: linear-gradient(to right, rgba(10, 37, 64, 0.9) 0%, rgba(10, 37, 64, 0.4) 60%, transparent 100%), url('{% static 'images/hero_medical_center_1779341809843.png' %}') center/cover no-repeat;">
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="hero-tag">Медицинские инновации мирового уровня</div>
+            <h1><strong>Национальный стандарт</strong><br>Восстановительной медицины</h1>
+            <p>Мы объединяем ведущих специалистов для развития роботизированной терапии, внедрения экзоскелетов и повышения качества реабилитации.</p>
+            <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                <a href="{% url 'about' %}" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem;">О Федерации</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section overlapping hero -->
+    <div class="container">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <h3 class="stat-title">Инновации</h3>
+                <p class="stat-desc">Внедрение роботизированных систем и экзоскелетов ExoAtlet в клиническую практику.</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🎓</div>
+                <h3 class="stat-title">Образование</h3>
+                <p class="stat-desc">Проведение международных мастер-классов и повышение квалификации специалистов.</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🤝</div>
+                <h3 class="stat-title">Сотрудничество</h3>
+                <p class="stat-desc">Обмен опытом с ведущими клиниками СНГ и мира для улучшения качества реабилитации.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="container split-section">
+        <div>
+            <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Лидерство в <strong>экзореабилитации</strong></h2>
+            <p style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2rem;">Интеграция передовых роботизированных систем позволяет существенно повысить эффективность восстановления пациентов и обеспечить им более высокое качество жизни.</p>
+            <a href="{% url 'about' %}" class="btn btn-outline">Подробнее о нашей миссии &rarr;</a>
+        </div>
+        <div>
+            <img src="{% static 'images/exo_rehabilitation_1779341831250.png' %}" alt="Экзореабилитация" class="split-img">
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--surface);">
+        <div class="container">
+            <h2 class="section-title">Последние <strong>новости</strong></h2>
+            <div class="news-grid">
+                {% for news in latest_news %}
+                <article class="news-card">
+                    {% if news.images.exists %}
+                        <img src="{{ news.images.first.image.url }}" alt="Новость" class="news-card-img">
+                    {% endif %}
+                    <div class="news-card-content">
+                        <div class="news-date">{{ news.date|date:"d E Y" }}</div>
+                        <h3 class="news-title">{{ news.title }}</h3>
+                        <a href="{% url 'news_detail' news.id %}" class="news-read-more">
+                            Читать полностью <span style="margin-left: 5px;">&rarr;</span>
+                        </a>
+                    </div>
+                </article>
+                {% empty %}
+                <p>Новостей пока нет.</p>
+                {% endfor %}
+            </div>
+            <div style="text-align: center; margin-top: 5rem;">
+                <a href="{% url 'news_list' %}" class="btn btn-outline" style="border-width: 2px;">Перейти в пресс-центр</a>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

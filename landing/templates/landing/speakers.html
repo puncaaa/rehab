@@ -1,0 +1,49 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Speakers Section -->
+<section id="speakers" class="section speakers-section bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">Спикеры</h2>
+        <div class="speakers-grid">
+            <!-- Speaker 1 -->
+            <div class="speaker-card">
+                <div class="speaker-photo">
+                    <img src="{% static 'images/speaker_1.jpg' %}" alt="Сейданова Амина">
+                </div>
+                <h3 class="speaker-name">Сейданова Амина</h3>
+                <p class="speaker-title">Президент Федерации, д.м.н., профессор</p>
+                <p class="speaker-country">Казахстан</p>
+            </div>
+            <!-- Speaker 2 -->
+            <div class="speaker-card">
+                <div class="speaker-photo">
+                    <img src="{% static 'images/speaker_2.jpg' %}" alt="Нина Короткова">
+                </div>
+                <h3 class="speaker-name">Нина Короткова</h3>
+                <p class="speaker-title">Эксперт по реабилитации</p>
+                <p class="speaker-country">Франция</p>
+            </div>
+            <!-- Speaker 3 -->
+            <div class="speaker-card">
+                <div class="speaker-photo">
+                    <img src="{% static 'images/speaker_3.jpeg' %}" alt="Jin-Hwan Lee">
+                </div>
+                <h3 class="speaker-name">Jin-Hwan Lee</h3>
+                <p class="speaker-title">Доктор медицинских наук</p>
+                <p class="speaker-country">Южная Корея</p>
+            </div>
+            <!-- Speaker 4 -->
+            <div class="speaker-card">
+                <div class="speaker-photo">
+                    <img src="{% static 'images/speaker_4.png' %}" alt="Иван Иванов">
+                </div>
+                <h3 class="speaker-name">Иван Иванов</h3>
+                <p class="speaker-title">Ведущий специалист</p>
+                <p class="speaker-country">Россия</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KazRehab - Казахстанская Федерация Физической Медицины и Реабилитации</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v={{ request.resolver_match.view_name|default:'3' }}{% now 'U' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="{% url 'index' %}">
+                    <div class="logo-text">
+                        <span>КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ</span><br>
+                        <span>ФИЗИЧЕСКОЙ МЕДИЦИНЫ И РЕАБИЛИТАЦИИ</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="{% url 'index' %}">Главная</a></li>
+                    <li><a href="{% url 'about' %}">О федерации</a></li>
+                    <li><a href="{% url 'news_list' %}">Пресс-центр</a></li>
+                    <li><a href="{% url 'partners' %}">Партнеры</a></li>
+                    <li><a href="{% url 'contacts' %}">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-extras">
+                <div class="lang-switch">
+                    <a href="javascript:void(0);" onclick="changeLanguage('ru')" class="lang-btn-ru">RU</a>
+                    <a href="javascript:void(0);" onclick="changeLanguage('kk')" class="lang-btn-kk">KK</a>
+                    <a href="javascript:void(0);" onclick="changeLanguage('en')" class="lang-btn-en">EN</a>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    КФФМР
+                </div>
+                <div class="footer-links" style="display: flex; gap: 2rem; font-size: 0.95rem;">
+                    <a href="{% url 'about' %}">О федерации</a>
+                    <a href="{% url 'news_list' %}">Пресс-центр</a>
+                    <a href="{% url 'contacts' %}">Контакты</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Казахстанская Федерация Физической Медицины и Реабилитации. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Google Translate Script -->
+    <div id="google_translate_element" style="display:none;"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ru',
+                includedLanguages: 'ru,kk,en',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+        
+        function changeLanguage(langCode) {
+            var selectField = document.querySelector(".goog-te-combo");
+            if (selectField) {
+                selectField.value = langCode;
+                selectField.dispatchEvent(new Event('change'));
+                
+                // Update active class on buttons
+                document.querySelectorAll('.lang-switch a').forEach(function(el) {
+                    el.classList.remove('active');
+                });
+                document.querySelector('.lang-btn-' + langCode).classList.add('active');
+            }
+        }
+
+        // Sync button state with Google Translate cookie on page load
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var currentLang = 'ru'; // Default
+                var match = document.cookie.match(/(?:^|;)\s*googtrans=([^;]+)/);
+                if (match) {
+                    var parts = match[1].split('/');
+                    if (parts.length > 2 && parts[2]) {
+                        currentLang = parts[2];
+                    }
+                }
+                
+                document.querySelectorAll('.lang-switch a').forEach(function(el) {
+                    el.classList.remove('active');
+                });
+                var activeBtn = document.querySelector('.lang-btn-' + currentLang);
+                if (activeBtn) {
+                    activeBtn.classList.add('active');
+                } else {
+                    document.querySelector('.lang-btn-ru').classList.add('active');
+                }
+            }, 300);
+        });
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>
