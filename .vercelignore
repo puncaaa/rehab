@@ -1,5 +1,5 @@
-images/
-пресс релиз/
-venv/
-scripts/
-.git/
+/images/
+/пресс релиз/
+/venv/
+/scripts/
+/.git/
