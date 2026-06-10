@@ -1,0 +1,140 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block content %}
+<main>
+    <!-- Page Header -->
+    <section class="hero" style="padding: 6rem 0; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); text-align: center; color: white;">
+        <div class="container" style="position: relative; z-index: 2; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+            <div class="hero-tag" style="margin-bottom: 1rem;">Пресс-центр</div>
+            <h1 style="font-size: 3rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem;">СМИ о <strong>нас</strong></h1>
+            <p style="font-size: 1.15rem; color: rgba(255, 255, 255, 0.8); font-weight: 300;">Актуальные публикации, репортажи и видеоматериалы о деятельности нашей Федерации.</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section" style="background: var(--background); padding: 5rem 0;">
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <div style="margin-bottom: 3rem; font-size: 0.9rem; color: var(--text-muted);">
+                <a href="{% url 'index' %}" style="color: var(--secondary); font-weight: 500;">Главная</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">&rarr;</span>
+                <span style="color: var(--text-muted);">Пресс-центр</span>
+                <span style="margin: 0 0.5rem; color: var(--border);">&rarr;</span>
+                <span style="color: var(--text-main); font-weight: 500;">СМИ о нас</span>
+            </div>
+
+            <!-- Articles Section -->
+            <div style="margin-bottom: 5rem;">
+                <h2 style="font-size: 2rem; font-weight: 600; color: var(--primary); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="width: 4px; height: 24px; background: var(--accent); display: inline-block; border-radius: 2px;"></span>
+                    Статьи и публикации
+                </h2>
+                
+                <div class="media-articles-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem;">
+                    <!-- Card 1 -->
+                    <div class="media-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm); transition: var(--transition);">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                                <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted); text-transform: uppercase;">11 Ноября 2022</span>
+                                <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(0, 119, 204, 0.05); border: 1px solid rgba(0, 119, 204, 0.1); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">PR</div>
+                            </div>
+                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent); display: block; margin-bottom: 0.5rem;">Pharmaceutical Reviews Казахстан</span>
+                            <h3 style="font-size: 1.15rem; font-weight: 600; color: var(--primary); line-height: 1.4; margin-bottom: 1.5rem;">В Алматы открылся Казахстанско-Корейский образовательный центр реабилитационной медицины</h3>
+                        </div>
+                        <a href="https://www.pharmreviews.kz/novosti/novosti-kazahstana/v-almaty-otkrylsya-kazahstansko-korejskij-obrazovatelnyj-tsentr-reabilitatsionnoj-meditsiny" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; font-size: 0.9rem; padding: 0.75rem; border-color: rgba(0, 119, 204, 0.3); color: var(--secondary); border-radius: var(--radius-sm); font-weight: 600; justify-content: center; gap: 0.5rem; display: flex; align-items: center;">
+                            Читать источник
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="media-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm); transition: var(--transition);">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                                <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted); text-transform: uppercase;">05 Июня 2023</span>
+                                <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(0, 119, 204, 0.05); border: 1px solid rgba(0, 119, 204, 0.1); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">ВА</div>
+                            </div>
+                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent); display: block; margin-bottom: 0.5rem;">Вечерний Алматы</span>
+                            <h3 style="font-size: 1.15rem; font-weight: 600; color: var(--primary); line-height: 1.4; margin-bottom: 1.5rem;">Единая цифровая экосистема здравоохранения охватила свыше 21 тысячи медорганизаций</h3>
+                        </div>
+                        <a href="https://vecher.kz/ru/article/edinaya-tsifrovaya-ekosistema-zdravoohraneniya-ohvatila-svyshe-21-tysyachi-medorganizatsii.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; font-size: 0.9rem; padding: 0.75rem; border-color: rgba(0, 119, 204, 0.3); color: var(--secondary); border-radius: var(--radius-sm); font-weight: 600; justify-content: center; gap: 0.5rem; display: flex; align-items: center;">
+                            Читать источник
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="media-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm); transition: var(--transition);">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                                <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted); text-transform: uppercase;">14 Сентября 2023</span>
+                                <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(0, 119, 204, 0.05); border: 1px solid rgba(0, 119, 204, 0.1); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">НП</div>
+                            </div>
+                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent); display: block; margin-bottom: 0.5rem;">Новое Поколение</span>
+                            <h3 style="font-size: 1.15rem; font-weight: 600; color: var(--primary); line-height: 1.4; margin-bottom: 1.5rem;">Реабилитация — это важно: проблемы и перспективы развития отрасли в Казахстане</h3>
+                        </div>
+                        <a href="https://np.kz/news/obshhestvo/zdorove-mediczina/reabilitacziya-eto-vazhno" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; font-size: 0.9rem; padding: 0.75rem; border-color: rgba(0, 119, 204, 0.3); color: var(--secondary); border-radius: var(--radius-sm); font-weight: 600; justify-content: center; gap: 0.5rem; display: flex; align-items: center;">
+                            Читать источник
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Videos Section -->
+            <div>
+                <h2 style="font-size: 2rem; font-weight: 600; color: var(--primary); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="width: 4px; height: 24px; background: var(--accent); display: inline-block; border-radius: 2px;"></span>
+                    Видео-репортажи
+                </h2>
+                
+                <div class="media-videos-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); gap: 2rem;">
+                    <!-- Video Card 1 -->
+                    <div class="video-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition);">
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000;">
+                            <iframe src="https://www.youtube.com/embed/xxj4vkzgWOY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; color: #E11D48; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem;">
+                                <span style="width: 8px; height: 8px; border-radius: 50%; background: #E11D48; display: inline-block;"></span>
+                                YouTube Видео
+                            </div>
+                            <h3 style="font-size: 1.1rem; font-weight: 600; color: var(--primary); line-height: 1.4;">Интервью о роботизированной реабилитации и применении экзоскелетов ExoAtlet в клиниках РК</h3>
+                        </div>
+                    </div>
+
+                    <!-- Video Card 2 -->
+                    <div class="video-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition);">
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000;">
+                            <iframe src="https://www.youtube.com/embed/gd2vsQ8AbJA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; color: #E11D48; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem;">
+                                <span style="width: 8px; height: 8px; border-radius: 50%; background: #E11D48; display: inline-block;"></span>
+                                YouTube Видео
+                            </div>
+                            <h3 style="font-size: 1.1rem; font-weight: 600; color: var(--primary); line-height: 1.4;">Мастер-класс КФФМР: новые технологии и практическое обучение специалистов физической терапии</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+    .media-card:hover, .video-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg) !important;
+    }
+    @media (max-width: 768px) {
+        .media-videos-grid {
+            grid-template-columns: 1fr !important;
+        }
+        .media-articles-grid {
+            grid-template-columns: 1fr !important;
+        }
+    }
+</style>
+{% endblock %}

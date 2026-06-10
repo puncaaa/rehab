@@ -8,4 +8,6 @@ urlpatterns = [
     path('news/<int:pk>/', views.news_detail, name='news_detail'),
     path('education/', views.education_view, name='education'),
     path('contacts/', views.contacts_view, name='contacts'),
+    path('membership/', views.membership_view, name='membership'),
+    path('press/media/', views.press_media_view, name='press_media'),
 ]

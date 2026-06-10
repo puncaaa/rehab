@@ -28,7 +28,17 @@
                 <ul class="nav-list">
                     <li><a href="{% url 'index' %}">Главная</a></li>
                     <li><a href="{% url 'about' %}">О федерации</a></li>
-                    <li><a href="{% url 'news_list' %}">Пресс-центр</a></li>
+                    <li><a href="{% url 'membership' %}">Членство</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" style="display: flex; align-items: center; gap: 0.25rem;">
+                            Пресс-центр
+                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 2px;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="{% url 'news_list' %}">Пресс-релизы</a>
+                            <a href="{% url 'press_media' %}">СМИ о нас</a>
+                        </div>
+                    </li>
                     <li><a href="{% url 'education' %}">Обучение</a></li>
                     <li><a href="{% url 'contacts' %}">Контакты</a></li>
                 </ul>
@@ -57,9 +67,11 @@
                 <div class="footer-logo">
                     КФФМР
                 </div>
-                <div class="footer-links" style="display: flex; gap: 2rem; font-size: 0.95rem;">
+                <div class="footer-links" style="display: flex; gap: 2rem; font-size: 0.95rem; flex-wrap: wrap;">
                     <a href="{% url 'about' %}">О федерации</a>
-                    <a href="{% url 'news_list' %}">Пресс-центр</a>
+                    <a href="{% url 'membership' %}">Членство</a>
+                    <a href="{% url 'news_list' %}">Пресс-релизы</a>
+                    <a href="{% url 'press_media' %}">СМИ о нас</a>
                     <a href="{% url 'contacts' %}">Контакты</a>
                 </div>
             </div>

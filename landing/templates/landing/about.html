@@ -3,20 +3,135 @@
 
 {% block content %}
 <main>
-    <section class="hero" style="padding: 6rem 0; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);">
-        <div class="container" style="position: relative; z-index: 2;">
-            <h1 style="font-weight: 600;">О Федерации</h1>
-            <p style="opacity: 0.9;">Национальный научный центр травматологии и ортопедии (ННЦТО) им. Батпенова Н.Д.</p>
+    <!-- Header Banner -->
+    <section class="hero" style="padding: 6rem 0; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); text-align: center; color: white;">
+        <div class="container" style="position: relative; z-index: 2; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+            <div class="hero-tag" style="margin-bottom: 1rem;">О нас</div>
+            <h1 style="font-size: 3rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem;">О <strong>Федерации</strong></h1>
+            <p style="font-size: 1.15rem; color: rgba(255, 255, 255, 0.8); font-weight: 300;">Казахстанская Федерация Физической Медицины и Реабилитации (КФФМР)</p>
         </div>
     </section>
 
-    <section class="container split-section" style="padding: 6rem 2rem;">
-        <div>
-            <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Наша <strong>Миссия</strong></h2>
-            <p style="font-size: 1.15rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.8;">Казахстанская федерация физической медицины и реабилитации (КФФМР) объединяет ведущих специалистов Казахстана для обсуждения перспектив роботизированной терапии в восстановлении пациентов с тяжелыми нарушениями двигательных функций.</p>
-            <p style="font-size: 1.15rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.8;">Президент КФФМР и главный внештатный реабилитолог МЗ РК Галия Жанаспаева подчеркивает ключевую роль экзореабилитации в современной системе здравоохранения Казахстана и обозначает приоритетные задачи по развитию этого высокотехнологичного направления.</p>
-            <p style="font-size: 1.15rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.8;">Интеграция роботизированных систем в клиническую практику позволяет существенно повысить эффективность восстановления пациентов и обеспечить им более высокое качество жизни.</p>
+    <!-- Content Sections -->
+    <section class="section" style="background: var(--background); padding: 5rem 0;">
+        <div class="container">
+            
+            <!-- Breadcrumbs -->
+            <div style="margin-bottom: 4rem; font-size: 0.9rem; color: var(--text-muted);">
+                <a href="{% url 'index' %}" style="color: var(--secondary); font-weight: 500;">Главная</a>
+                <span style="margin: 0 0.5rem; color: var(--border);">&rarr;</span>
+                <span style="color: var(--text-main); font-weight: 500;">О федерации</span>
+            </div>
+
+            <!-- Mission -->
+            <div class="split-section" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center; margin-bottom: 6rem;">
+                <div>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem; font-size: 2.25rem;">Наша <strong>Миссия</strong></h2>
+                    <p style="font-size: 1.15rem; color: var(--text-main); line-height: 1.8; margin-bottom: 1.5rem; font-weight: 500;">
+                        Миссия КФФМР заключается в объединении ведущих медицинских специалистов, научных деятелей и технологических партнеров для создания передовой, высокотехнологичной системы реабилитации в Республике Казахстан.
+                    </p>
+                    <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;">
+                        Мы стремимся к внедрению стандартов доказательной медицины, продвижению роботизированных технологий (включая экзореабилитацию на базе систем ExoAtlet) и повышению квалификации врачей, эрготерапевтов и инструкторов ЛФК на международном уровне.
+                    </p>
+                </div>
+                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent);">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--accent);">🎯</div>
+                    <h3 style="font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; font-size: 1.2rem;">Стратегический фокус</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Интеграция инновационных роботизированных комплексов в клиническую практику всех регионов Казахстана.</p>
+                </div>
+            </div>
+
+            <!-- Goals -->
+            <div style="margin-bottom: 6rem;">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 3.5rem; font-size: 2.25rem;">Основные <strong>Цели</strong></h2>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;" class="goals-grid">
+                    <!-- Goal 1 -->
+                    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm); transition: var(--transition);" class="goal-card">
+                        <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(0, 119, 204, 0.08); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem; font-weight: bold;">01</div>
+                        <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--primary); margin-bottom: 1rem;">Развитие стандартов</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Содействие государственным органам в разработке и актуализации клинических протоколов и медицинских регламентов восстановительного лечения.</p>
+                    </div>
+                    <!-- Goal 2 -->
+                    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm); transition: var(--transition);" class="goal-card">
+                        <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(0, 119, 204, 0.08); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem; font-weight: bold;">02</div>
+                        <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--primary); margin-bottom: 1rem;">Образование</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Организация циклов повышения квалификации, международных конференций, мастер-классов и семинаров с привлечением ведущих зарубежных спикеров.</p>
+                    </div>
+                    <!-- Goal 3 -->
+                    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm); transition: var(--transition);" class="goal-card">
+                        <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(0, 119, 204, 0.08); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem; font-weight: bold;">03</div>
+                        <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--primary); margin-bottom: 1rem;">Сотрудничество</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Укрепление международных связей, трансфер передовых медицинских технологий (особенно корейских школ реабилитации) в медицинские хабы РК.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Structure -->
+            <div>
+                <h2 class="section-title" style="text-align: center; margin-bottom: 3.5rem; font-size: 2.25rem;">Организационная <strong>Структура</strong></h2>
+                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 4rem 2rem; box-shadow: var(--shadow-sm); text-align: center; max-width: 900px; margin: 0 auto;">
+                    
+                    <!-- Top Level -->
+                    <div style="background: var(--primary); color: white; padding: 1.25rem 2rem; border-radius: var(--radius-sm); display: inline-block; font-weight: 600; min-width: 250px; box-shadow: var(--shadow-sm); margin-bottom: 2rem;">
+                        Общее собрание членов КФФМР
+                    </div>
+                    
+                    <div style="width: 2px; height: 30px; background: var(--border); margin: 0 auto;"></div>
+                    
+                    <!-- Board -->
+                    <div style="background: var(--secondary); color: white; padding: 1.25rem 2rem; border-radius: var(--radius-sm); display: inline-block; font-weight: 600; min-width: 250px; box-shadow: var(--shadow-sm); margin-bottom: 2rem;">
+                        Правление КФФМР
+                    </div>
+
+                    <div style="width: 2px; height: 30px; background: var(--border); margin: 0 auto;"></div>
+
+                    <!-- President (Middle) -->
+                    <div style="border: 2px solid var(--accent); background: var(--background); padding: 1.5rem 2.5rem; border-radius: var(--radius-md); display: inline-block; min-width: 300px; box-shadow: var(--shadow-sm); margin-bottom: 2rem;">
+                        <span style="font-size: 0.85rem; font-weight: 700; color: var(--accent); uppercase tracking-wider; display: block; margin-bottom: 0.25rem;">Президент</span>
+                        <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--primary); margin-bottom: 0.25rem;">Галия Жанаспаева</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Главный внештатный реабилитолог МЗ РК</p>
+                    </div>
+
+                    <div style="width: 2px; height: 30px; background: var(--border); margin: 0 auto;"></div>
+
+                    <!-- Lower levels (grid) -->
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1rem;" class="structure-bottom-grid">
+                        <div style="background: var(--background); border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm); font-size: 0.95rem; font-weight: 500; color: var(--primary);">
+                            Секретариат
+                        </div>
+                        <div style="background: var(--background); border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm); font-size: 0.95rem; font-weight: 500; color: var(--primary);">
+                            Экспертный совет
+                        </div>
+                        <div style="background: var(--background); border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm); font-size: 0.95rem; font-weight: 500; color: var(--primary);">
+                            Региональные филиалы
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </section>
 </main>
+
+<style>
+    .goal-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg) !important;
+        border-color: var(--secondary) !important;
+    }
+    @media (max-width: 992px) {
+        .split-section {
+            grid-template-columns: 1fr !important;
+            gap: 2rem !important;
+        }
+        .goals-grid {
+            grid-template-columns: 1fr !important;
+        }
+        .structure-bottom-grid {
+            grid-template-columns: 1fr !important;
+            gap: 1rem !important;
+        }
+    }
+</style>
 {% endblock %}

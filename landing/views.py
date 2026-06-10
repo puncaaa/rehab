@@ -21,3 +21,16 @@ def education_view(request):
 
 def contacts_view(request):
     return render(request, 'landing/contacts.html')
+
+def membership_view(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        organization = request.POST.get('organization')
+        # Here we could save a model or send an email, but rendering with submitted context is sufficient for front-end demonstration.
+        return render(request, 'landing/membership.html', {'submitted': True, 'name': name})
+    return render(request, 'landing/membership.html')
+
+def press_media_view(request):
+    return render(request, 'landing/press_media.html')

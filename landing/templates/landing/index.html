@@ -35,6 +35,31 @@
         </div>
     </div>
 
+    <!-- President Welcome Section -->
+    <section class="president-welcome-section">
+        <div class="container president-container">
+            <div class="president-photo-wrapper">
+                <img src="{% static 'images/president_photo.png' %}" alt="Галия Жанаспаева" class="president-photo">
+            </div>
+            <div>
+                <span class="hero-tag" style="background: rgba(0, 119, 204, 0.05); border: 1px solid rgba(0, 119, 204, 0.1); color: var(--secondary); margin-bottom: 1.5rem; display: inline-block;">Обращение президента</span>
+                <h2 style="font-size: 2.25rem; font-weight: 700; color: var(--primary); margin-bottom: 1.5rem;">Добро пожаловать!</h2>
+                <div class="president-quote">
+                    «Инновационные роботизированные системы, цифровая диагностика и экзоскелеты становятся повседневными инструментами врачей, возвращая пациентам свободу движения и надежду на полноценную жизнь».
+                </div>
+                <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
+                    Наша Федерация объединяет ведущих специалистов Казахстана для внедрения передовых роботизированных технологий и повышения стандартов физической медицины и реабилитации. Наша общая миссия — создать доступную и эффективную реабилитационную среду в каждом уголке нашей страны.
+                </p>
+                <div style="font-weight: 700; color: var(--primary); font-size: 1.1rem; line-height: 1.4;">
+                    Галия Жанаспаева
+                </div>
+                <div style="color: var(--accent); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.25rem;">
+                    Президент КФФМР, Главный внештатный реабилитолог МЗ РК
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="container split-section">
         <div>
             <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Лидерство в <strong>экзореабилитации</strong></h2>
@@ -69,6 +94,24 @@
             </div>
             <div style="text-align: center; margin-top: 5rem;">
                 <a href="{% url 'news_list' %}" class="btn btn-outline" style="border-width: 2px;">Перейти в пресс-центр</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 1rem;">Наши <strong>Партнеры</strong></h2>
+            <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 3rem; font-size: 1.05rem;">
+                Мы сотрудничаем с ведущими профессиональными медицинскими ассоциациями Казахстана для трансфера знаний и технологий.
+            </p>
+            <div class="partners-grid">
+                <a href="https://katokz.kz/" target="_blank" rel="noopener noreferrer" class="partner-logo-card">
+                    <span class="partner-logo-name">Ассоциация травматологов<br>и ортопедов (КАТО)</span>
+                </a>
+                <a href="https://www.neuroassoc.kz/" target="_blank" rel="noopener noreferrer" class="partner-logo-card">
+                    <span class="partner-logo-name">Ассоциация неврологов РК</span>
+                </a>
             </div>
         </div>
     </section>
