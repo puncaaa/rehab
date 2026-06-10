@@ -2,22 +2,28 @@
 {% load static %}
 
 {% block content %}
-<main>
-    <!-- Page Header -->
-    <section class="hero" style="padding: 6rem 0; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); text-align: center; color: white;">
-        <div class="container" style="position: relative; z-index: 2; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
-            <div class="hero-tag" style="margin-bottom: 1rem;">Пресс-центр</div>
-            <h1 style="font-size: 3rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem;">СМИ о <strong>нас</strong></h1>
-            <p style="font-size: 1.15rem; color: rgba(255, 255, 255, 0.8); font-weight: 300;">Актуальные публикации, репортажи и видеоматериалы о деятельности нашей Федерации.</p>
+<main style="background-color: var(--background); min-height: 100vh;">
+    <!-- Modern Hero Header with Glassmorphism / Patterns -->
+    <section class="about-hero" style="position: relative; padding: 6rem 0; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); overflow: hidden; color: white;">
+        <div style="position: absolute; top: -100px; right: -100px; width: 300px; height: 300px; border-radius: 50%; background: rgba(0, 179, 166, 0.12); filter: blur(80px);"></div>
+        <div style="position: absolute; bottom: -100px; left: -100px; width: 300px; height: 300px; border-radius: 50%; background: rgba(0, 119, 204, 0.15); filter: blur(80px);"></div>
+        
+        <div class="container" style="position: relative; z-index: 2; max-width: 800px; text-align: center; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+            <div class="hero-tag" style="margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.8rem; color: var(--accent); font-weight: 600;">Пресс-центр</div>
+            <h1 style="font-size: 3rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.5px; margin: 0;">СМИ о <strong>нас</strong></h1>
+            <div style="width: 50px; height: 3px; background: var(--accent); border-radius: 2px; margin-top: 0.5rem;"></div>
+            <p style="font-size: 1.15rem; color: rgba(255, 255, 255, 0.85); font-weight: 300; max-width: 650px; line-height: 1.6; margin-top: 0.5rem; margin-bottom: 0;">
+                Актуальные публикации, экспертные статьи и видеорепортажи о деятельности нашей Федерации.
+            </p>
         </div>
     </section>
 
-    <!-- Content Section -->
-    <section class="section" style="background: var(--background); padding: 5rem 0;">
+    <!-- Main Content Section -->
+    <section style="padding: 5rem 0;">
         <div class="container">
             <!-- Breadcrumbs -->
-            <div style="margin-bottom: 3rem; font-size: 0.9rem; color: var(--text-muted);">
-                <a href="{% url 'index' %}" style="color: var(--secondary); font-weight: 500;">Главная</a>
+            <div style="margin-bottom: 4rem; font-size: 0.9rem; color: var(--text-muted);">
+                <a href="{% url 'index' %}" style="color: var(--secondary); font-weight: 500; transition: var(--transition);">Главная</a>
                 <span style="margin: 0 0.5rem; color: var(--border);">&rarr;</span>
                 <span style="color: var(--text-muted);">Пресс-центр</span>
                 <span style="margin: 0 0.5rem; color: var(--border);">&rarr;</span>
@@ -25,96 +31,162 @@
             </div>
 
             <!-- Articles Section -->
-            <div style="margin-bottom: 5rem;">
-                <h2 style="font-size: 2rem; font-weight: 600; color: var(--primary); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem;">
-                    <span style="width: 4px; height: 24px; background: var(--accent); display: inline-block; border-radius: 2px;"></span>
+            <div style="margin-bottom: 6rem;">
+                <h2 style="font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 2.5rem; margin-top: 0; display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="width: 4px; height: 26px; background: var(--accent); display: inline-block; border-radius: 2px;"></span>
                     Статьи и публикации
                 </h2>
                 
-                <div class="media-articles-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem;">
+                <div class="media-articles-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 2rem;">
                     <!-- Card 1 -->
-                    <div class="media-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm); transition: var(--transition);">
-                        <div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-                                <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted); text-transform: uppercase;">11 Ноября 2022</span>
-                                <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(0, 119, 204, 0.05); border: 1px solid rgba(0, 119, 204, 0.1); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">PR</div>
+                    <div class="premium-media-card">
+                        <div class="card-inner-wrapper">
+                            <!-- Card Header -->
+                            <div class="card-meta">
+                                <div class="date-badge">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: -2px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                    <span>11 Ноября 2022</span>
+                                </div>
+                                <span class="pub-type-tag">Статья</span>
                             </div>
-                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent); display: block; margin-bottom: 0.5rem;">Pharmaceutical Reviews Казахстан</span>
-                            <h3 style="font-size: 1.15rem; font-weight: 600; color: var(--primary); line-height: 1.4; margin-bottom: 1.5rem;">В Алматы открылся Казахстанско-Корейский образовательный центр реабилитационной медицины</h3>
+                            
+                            <!-- Source Logo & Name -->
+                            <div class="pub-source-container">
+                                <div class="source-icon-badge" style="background: rgba(0, 119, 204, 0.08); color: var(--secondary);">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6Z"></path></svg>
+                                </div>
+                                <span class="pub-source-name">Pharmaceutical Reviews Казахстан</span>
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="pub-title">В Алматы открылся Казахстанско-Корейский образовательный центр реабилитационной медицины</h3>
+                            
+                            <!-- Description / Snippet -->
+                            <p class="pub-snippet">
+                                Открытие передового центра реабилитационной медицины на базе городской клинической больницы Алматы. Проект реализован при активном участии специалистов КФФМР...
+                            </p>
                         </div>
-                        <a href="https://www.pharmreviews.kz/novosti/novosti-kazahstana/v-almaty-otkrylsya-kazahstansko-korejskij-obrazovatelnyj-tsentr-reabilitatsionnoj-meditsiny" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; font-size: 0.9rem; padding: 0.75rem; border-color: rgba(0, 119, 204, 0.3); color: var(--secondary); border-radius: var(--radius-sm); font-weight: 600; justify-content: center; gap: 0.5rem; display: flex; align-items: center;">
-                            Читать источник
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                        </a>
+                        
+                        <!-- Footer Button -->
+                        <div class="card-footer-action">
+                            <a href="https://www.pharmreviews.kz/novosti/novosti-kazahstana/v-almaty-otkrylsya-kazahstansko-korejskij-obrazovatelnyj-tsentr-reabilitatsionnoj-meditsiny" target="_blank" rel="noopener noreferrer" class="read-source-btn">
+                                <span>Читать источник</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                        </div>
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="media-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm); transition: var(--transition);">
-                        <div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-                                <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted); text-transform: uppercase;">05 Июня 2023</span>
-                                <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(0, 119, 204, 0.05); border: 1px solid rgba(0, 119, 204, 0.1); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">ВА</div>
+                    <div class="premium-media-card">
+                        <div class="card-inner-wrapper">
+                            <!-- Card Header -->
+                            <div class="card-meta">
+                                <div class="date-badge">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: -2px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                    <span>05 Июня 2023</span>
+                                </div>
+                                <span class="pub-type-tag">Статья</span>
                             </div>
-                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent); display: block; margin-bottom: 0.5rem;">Вечерний Алматы</span>
-                            <h3 style="font-size: 1.15rem; font-weight: 600; color: var(--primary); line-height: 1.4; margin-bottom: 1.5rem;">Единая цифровая экосистема здравоохранения охватила свыше 21 тысячи медорганизаций</h3>
+                            
+                            <!-- Source Logo & Name -->
+                            <div class="pub-source-container">
+                                <div class="source-icon-badge" style="background: rgba(0, 179, 166, 0.08); color: var(--accent);">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6Z"></path></svg>
+                                </div>
+                                <span class="pub-source-name">Вечерний Алматы</span>
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="pub-title">Единая цифровая экосистема здравоохранения охватила свыше 21 тысячи медорганизаций</h3>
+                            
+                            <!-- Description / Snippet -->
+                            <p class="pub-snippet">
+                                Масштабная цифровизация медицинских услуг в РК. Интеграция цифровых сервисов для автоматизации процессов реабилитации и мониторинга состояния пациентов...
+                            </p>
                         </div>
-                        <a href="https://vecher.kz/ru/article/edinaya-tsifrovaya-ekosistema-zdravoohraneniya-ohvatila-svyshe-21-tysyachi-medorganizatsii.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; font-size: 0.9rem; padding: 0.75rem; border-color: rgba(0, 119, 204, 0.3); color: var(--secondary); border-radius: var(--radius-sm); font-weight: 600; justify-content: center; gap: 0.5rem; display: flex; align-items: center;">
-                            Читать источник
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                        </a>
+                        
+                        <!-- Footer Button -->
+                        <div class="card-footer-action">
+                            <a href="https://vecher.kz/ru/article/edinaya-tsifrovaya-ekosistema-zdravoohraneniya-ohvatila-svyshe-21-tysyachi-medorganizatsii.html" target="_blank" rel="noopener noreferrer" class="read-source-btn">
+                                <span>Читать источник</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                        </div>
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="media-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm); transition: var(--transition);">
-                        <div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-                                <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted); text-transform: uppercase;">14 Сентября 2023</span>
-                                <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(0, 119, 204, 0.05); border: 1px solid rgba(0, 119, 204, 0.1); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">НП</div>
+                    <div class="premium-media-card">
+                        <div class="card-inner-wrapper">
+                            <!-- Card Header -->
+                            <div class="card-meta">
+                                <div class="date-badge">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: -2px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                    <span>14 Сентября 2023</span>
+                                </div>
+                                <span class="pub-type-tag">Статья</span>
                             </div>
-                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent); display: block; margin-bottom: 0.5rem;">Новое Поколение</span>
-                            <h3 style="font-size: 1.15rem; font-weight: 600; color: var(--primary); line-height: 1.4; margin-bottom: 1.5rem;">Реабилитация — это важно: проблемы и перспективы развития отрасли в Казахстане</h3>
+                            
+                            <!-- Source Logo & Name -->
+                            <div class="pub-source-container">
+                                <div class="source-icon-badge" style="background: rgba(100, 116, 139, 0.08); color: var(--text-muted);">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6Z"></path></svg>
+                                </div>
+                                <span class="pub-source-name">Новое Поколение</span>
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="pub-title">Реабилитация — это важно: проблемы и перспективы развития отрасли в Казахстане</h3>
+                            
+                            <!-- Description / Snippet -->
+                            <p class="pub-snippet">
+                                Подробное интервью с ведущими экспертами КФФМР о развитии физической медицины, нехватке кадров и планах внедрения междисциплинарного подхода...
+                            </p>
                         </div>
-                        <a href="https://np.kz/news/obshhestvo/zdorove-mediczina/reabilitacziya-eto-vazhno" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; font-size: 0.9rem; padding: 0.75rem; border-color: rgba(0, 119, 204, 0.3); color: var(--secondary); border-radius: var(--radius-sm); font-weight: 600; justify-content: center; gap: 0.5rem; display: flex; align-items: center;">
-                            Читать источник
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                        </a>
+                        
+                        <!-- Footer Button -->
+                        <div class="card-footer-action">
+                            <a href="https://np.kz/news/obshhestvo/zdorove-mediczina/reabilitacziya-eto-vazhno" target="_blank" rel="noopener noreferrer" class="read-source-btn">
+                                <span>Читать источник</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Videos Section -->
             <div>
-                <h2 style="font-size: 2rem; font-weight: 600; color: var(--primary); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem;">
-                    <span style="width: 4px; height: 24px; background: var(--accent); display: inline-block; border-radius: 2px;"></span>
+                <h2 style="font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 2.5rem; margin-top: 0; display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="width: 4px; height: 26px; background: var(--accent); display: inline-block; border-radius: 2px;"></span>
                     Видео-репортажи
                 </h2>
                 
-                <div class="media-videos-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); gap: 2rem;">
+                <div class="media-videos-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); gap: 3rem;">
                     <!-- Video Card 1 -->
-                    <div class="video-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition);">
-                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000;">
-                            <iframe src="https://www.youtube.com/embed/xxj4vkzgWOY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="premium-video-card">
+                        <div class="video-iframe-wrapper">
+                            <iframe src="https://www.youtube.com/embed/xxj4vkzgWOY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
-                        <div style="padding: 1.5rem;">
-                            <div style="display: flex; align-items: center; gap: 0.5rem; color: #E11D48; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem;">
-                                <span style="width: 8px; height: 8px; border-radius: 50%; background: #E11D48; display: inline-block;"></span>
-                                YouTube Видео
+                        <div class="video-info-content">
+                            <div class="video-tag-label">
+                                <span class="pulse-indicator"></span>
+                                <span>YouTube Репортаж</span>
                             </div>
-                            <h3 style="font-size: 1.1rem; font-weight: 600; color: var(--primary); line-height: 1.4;">Интервью о роботизированной реабилитации и применении экзоскелетов ExoAtlet в клиниках РК</h3>
+                            <h3 class="video-title">Интервью о роботизированной реабилитации и применении экзоскелетов ExoAtlet в клиниках РК</h3>
                         </div>
                     </div>
 
                     <!-- Video Card 2 -->
-                    <div class="video-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition);">
-                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000;">
-                            <iframe src="https://www.youtube.com/embed/gd2vsQ8AbJA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="premium-video-card">
+                        <div class="video-iframe-wrapper">
+                            <iframe src="https://www.youtube.com/embed/gd2vsQ8AbJA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
-                        <div style="padding: 1.5rem;">
-                            <div style="display: flex; align-items: center; gap: 0.5rem; color: #E11D48; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem;">
-                                <span style="width: 8px; height: 8px; border-radius: 50%; background: #E11D48; display: inline-block;"></span>
-                                YouTube Видео
+                        <div class="video-info-content">
+                            <div class="video-tag-label">
+                                <span class="pulse-indicator"></span>
+                                <span>YouTube Репортаж</span>
                             </div>
-                            <h3 style="font-size: 1.1rem; font-weight: 600; color: var(--primary); line-height: 1.4;">Мастер-класс КФФМР: новые технологии и практическое обучение специалистов физической терапии</h3>
+                            <h3 class="video-title">Мастер-класс КФФМР: новые технологии и практическое обучение специалистов физической терапии</h3>
                         </div>
                     </div>
                 </div>
@@ -124,16 +196,249 @@
 </main>
 
 <style>
-    .media-card:hover, .video-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-lg) !important;
+    /* Premium Card Styles */
+    .premium-media-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 4px 6px -1px rgba(10, 37, 64, 0.02), 0 2px 4px -1px rgba(10, 37, 64, 0.01);
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
     }
-    @media (max-width: 768px) {
+    
+    .premium-media-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--secondary) 0%, var(--accent) 100%);
+        opacity: 0;
+        transition: var(--transition);
+    }
+
+    .premium-media-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 25px -5px rgba(10, 37, 64, 0.07), 0 10px 10px -5px rgba(10, 37, 64, 0.03);
+        border-color: rgba(0, 119, 204, 0.15);
+    }
+    
+    .premium-media-card:hover::before {
+        opacity: 1;
+    }
+
+    .card-inner-wrapper {
+        padding: 2.5rem;
+    }
+
+    .card-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .date-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    .pub-type-tag {
+        background: rgba(0, 179, 166, 0.06);
+        border: 1px solid rgba(0, 179, 166, 0.1);
+        color: var(--accent);
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.25rem 0.75rem;
+        border-radius: 50px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .pub-source-container {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .source-icon-badge {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .pub-source-name {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text-muted);
+    }
+
+    .pub-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--primary);
+        line-height: 1.45;
+        margin-bottom: 1rem;
+        margin-top: 0;
+        transition: var(--transition);
+    }
+    
+    .premium-media-card:hover .pub-title {
+        color: var(--secondary);
+    }
+
+    .pub-snippet {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .card-footer-action {
+        padding: 1.5rem 2.5rem 2.5rem;
+        border-top: 1px solid var(--border);
+        background: #fafbfc;
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    }
+
+    .read-source-btn {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.8rem 1.5rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: var(--transition);
+        cursor: pointer;
+    }
+
+    .read-source-btn:hover {
+        background: var(--secondary);
+        color: white !important;
+        border-color: var(--secondary);
+        box-shadow: 0 4px 12px rgba(0, 119, 204, 0.2);
+        transform: translateY(-2px);
+    }
+
+    /* Premium Video Card Styles */
+    .premium-video-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(10, 37, 64, 0.02), 0 2px 4px -1px rgba(10, 37, 64, 0.01);
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .premium-video-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 25px -5px rgba(10, 37, 64, 0.07), 0 10px 10px -5px rgba(10, 37, 64, 0.03);
+        border-color: rgba(0, 119, 204, 0.15);
+    }
+
+    .video-iframe-wrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        background: #000;
+        transition: var(--transition);
+    }
+
+    .video-iframe-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    .video-info-content {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .video-tag-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #E11D48;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .pulse-indicator {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #E11D48;
+        display: inline-block;
+        animation: pulseAnimation 2s infinite;
+    }
+
+    .video-title {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--primary);
+        line-height: 1.45;
+        margin: 0;
+        transition: var(--transition);
+    }
+
+    .premium-video-card:hover .video-title {
+        color: var(--secondary);
+    }
+
+    @keyframes pulseAnimation {
+        0% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7);
+        }
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 6px rgba(225, 29, 72, 0);
+        }
+        100% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(225, 29, 72, 0);
+        }
+    }
+
+    @media (max-width: 992px) {
         .media-videos-grid {
             grid-template-columns: 1fr !important;
+            gap: 2rem !important;
         }
         .media-articles-grid {
             grid-template-columns: 1fr !important;
+            gap: 2rem !important;
         }
     }
 </style>
