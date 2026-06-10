@@ -2,18 +2,23 @@
 {% load static %}
 
 {% block content %}
-<main>
-    <!-- Header Banner -->
-    <section class="hero" style="padding: 6rem 0; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); text-align: center; color: white;">
-        <div class="container" style="position: relative; z-index: 2; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
-            <div class="hero-tag" style="margin-bottom: 1rem;">О нас</div>
-            <h1 style="font-size: 3rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem;">О <strong>Федерации</strong></h1>
-            <p style="font-size: 1.15rem; color: rgba(255, 255, 255, 0.8); font-weight: 300;">Казахстанская Федерация Физической Медицины и Реабилитации (КФФМР)</p>
+<main style="background-color: var(--background);">
+    <!-- Hero Banner with Modern Gradient -->
+    <section class="about-hero" style="position: relative; padding: 7rem 0; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); overflow: hidden; color: white;">
+        <div style="position: absolute; top: -100px; right: -100px; width: 300px; height: 300px; border-radius: 50%; background: rgba(0, 179, 166, 0.1); filter: blur(80px);"></div>
+        <div style="position: absolute; bottom: -100px; left: -100px; width: 350px; height: 350px; border-radius: 50%; background: rgba(0, 119, 204, 0.15); filter: blur(80px);"></div>
+        <div class="container" style="position: relative; z-index: 2; max-width: 900px; text-align: center; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+            <div class="hero-tag" style="margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; color: var(--accent);">Национальное Профессиональное Объединение</div>
+            <h1 style="font-size: 3rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.5px; margin: 0;">О <strong>Федерации</strong></h1>
+            <div style="width: 60px; height: 3px; background: var(--accent); border-radius: 2px; margin-top: 0.5rem;"></div>
+            <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.9); font-weight: 300; max-width: 750px; line-height: 1.6; margin-top: 1rem; margin-bottom: 0;">
+                Казахстанская Федерация физической медицины и реабилитации (КФФМР)
+            </p>
         </div>
     </section>
 
-    <!-- Content Sections -->
-    <section class="section" style="background: var(--background); padding: 5rem 0;">
+    <!-- Main Content Section -->
+    <section style="padding: 5rem 0;">
         <div class="container">
             
             <!-- Breadcrumbs -->
@@ -23,90 +28,318 @@
                 <span style="color: var(--text-main); font-weight: 500;">О федерации</span>
             </div>
 
-            <!-- Mission -->
-            <div class="split-section" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center; margin-bottom: 6rem;">
-                <div>
-                    <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem; font-size: 2.25rem;">Наша <strong>Миссия</strong></h2>
-                    <p style="font-size: 1.15rem; color: var(--text-main); line-height: 1.8; margin-bottom: 1.5rem; font-weight: 500;">
-                        Миссия КФФМР заключается в объединении ведущих медицинских специалистов, научных деятелей и технологических партнеров для создания передовой, высокотехнологичной системы реабилитации в Республике Казахстан.
+            <!-- Introduction block -->
+            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 3rem; box-shadow: var(--shadow-sm); margin-bottom: 5rem; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: var(--secondary);"></div>
+                <div style="font-size: 1.15rem; color: var(--text-main); line-height: 1.8; display: flex; flex-direction: column; gap: 1.25rem;">
+                    <p style="font-weight: 500; margin: 0;">
+                        Казахстанская Федерация физической медицины и реабилитации (КФФМР) является национальным профессиональным объединением специалистов, деятельность которых связана с физической и реабилитационной медициной, нейрореабилитацией, восстановительным лечением, физиотерапией и смежными направлениями здравоохранения.
                     </p>
-                    <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;">
-                        Мы стремимся к внедрению стандартов доказательной медицины, продвижению роботизированных технологий (включая экзореабилитацию на базе систем ExoAtlet) и повышению квалификации врачей, эрготерапевтов и инструкторов ЛФК на международном уровне.
+                    <p style="margin: 0;">
+                        Федерация создана для содействия развитию современной системы медицинской реабилитации в Республике Казахстан, объединения профессионального сообщества, повышения качества реабилитационной помощи и внедрения лучших международных практик в клиническую деятельность.
                     </p>
-                </div>
-                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent);">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--accent);">🎯</div>
-                    <h3 style="font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; font-size: 1.2rem;">Стратегический фокус</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Интеграция инновационных роботизированных комплексов в клиническую практику всех регионов Казахстана.</p>
+                    <p style="margin: 0;">
+                        КФФМР выступает экспертной площадкой для профессионального взаимодействия специалистов, развития образования, науки и международного сотрудничества в области физической медицины и реабилитации.
+                    </p>
                 </div>
             </div>
 
-            <!-- Goals -->
+            <!-- Mission & Vision Layout -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 6rem;" class="mv-grid">
+                <!-- Mission -->
+                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 3rem; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="font-size: 2.5rem; color: var(--secondary); line-height: 1;">🛡️</div>
+                    <h2 style="font-size: 1.75rem; font-weight: 700; color: var(--primary); margin: 0;">Миссия</h2>
+                    <p style="color: var(--text-main); font-size: 1.05rem; line-height: 1.8; margin: 0;">
+                        Повышение качества жизни населения Республики Казахстан путем развития физической медицины и реабилитации, внедрения научно обоснованных методов восстановления здоровья, подготовки высококвалифицированных специалистов и обеспечения доступности современной реабилитационной помощи.
+                    </p>
+                </div>
+                
+                <!-- Vision -->
+                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 3rem; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="font-size: 2.5rem; color: var(--accent); line-height: 1;">👁️</div>
+                    <h2 style="font-size: 1.75rem; font-weight: 700; color: var(--primary); margin: 0;">Видение</h2>
+                    <p style="color: var(--text-main); font-size: 1.05rem; line-height: 1.8; margin: 0;">
+                        Мы стремимся стать ведущей национальной профессиональной организацией в области физической медицины и реабилитации, объединяющей специалистов, научные организации и медицинские учреждения для развития эффективной системы реабилитации, соответствующей международным стандартам качества и безопасности.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Strategic Goals -->
             <div style="margin-bottom: 6rem;">
-                <h2 class="section-title" style="text-align: center; margin-bottom: 3.5rem; font-size: 2.25rem;">Основные <strong>Цели</strong></h2>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;" class="goals-grid">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <span style="font-size: 0.85rem; font-weight: 700; color: var(--secondary); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 0.5rem;">Развитие и ориентиры</span>
+                    <h2 style="font-size: 2.25rem; font-weight: 700; color: var(--primary); margin: 0;">Стратегические <strong>цели</strong></h2>
+                    <div style="width: 40px; height: 3px; background: var(--accent); border-radius: 2px; margin: 1rem auto 0;"></div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;" class="goals-grid-three">
                     <!-- Goal 1 -->
-                    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm); transition: var(--transition);" class="goal-card">
-                        <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(0, 119, 204, 0.08); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem; font-weight: bold;">01</div>
-                        <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--primary); margin-bottom: 1rem;">Развитие стандартов</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Содействие государственным органам в разработке и актуализации клинических протоколов и медицинских регламентов восстановительного лечения.</p>
+                    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm); transition: var(--transition);" class="card-hover-effect">
+                        <div style="font-size: 2rem; margin-bottom: 1rem; line-height: 1;">👥</div>
+                        <h3 style="font-size: 1.2rem; font-weight: 600; color: var(--primary); margin-bottom: 0.75rem;">Профессиональное сообщество</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">Объединение специалистов в области физической медицины и реабилитации на единой профессиональной платформе для обмена знаниями, опытом и лучшими клиническими практиками.</p>
                     </div>
                     <!-- Goal 2 -->
-                    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm); transition: var(--transition);" class="goal-card">
-                        <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(0, 119, 204, 0.08); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem; font-weight: bold;">02</div>
-                        <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--primary); margin-bottom: 1rem;">Образование</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Организация циклов повышения квалификации, международных конференций, мастер-классов и семинаров с привлечением ведущих зарубежных спикеров.</p>
+                    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm); transition: var(--transition);" class="card-hover-effect">
+                        <div style="font-size: 2rem; margin-bottom: 1rem; line-height: 1;">🎓</div>
+                        <h3 style="font-size: 1.2rem; font-weight: 600; color: var(--primary); margin-bottom: 0.75rem;">Развитие образования</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">Совершенствование системы подготовки и непрерывного развития специалистов через образовательные программы, мастер-классы, стажировки и международное сотрудничество.</p>
                     </div>
                     <!-- Goal 3 -->
-                    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm); transition: var(--transition);" class="goal-card">
-                        <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(0, 119, 204, 0.08); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem; font-weight: bold;">03</div>
-                        <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--primary); margin-bottom: 1rem;">Сотрудничество</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Укрепление международных связей, трансфер передовых медицинских технологий (особенно корейских школ реабилитации) в медицинские хабы РК.</p>
+                    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm); transition: var(--transition);" class="card-hover-effect">
+                        <div style="font-size: 2rem; margin-bottom: 1rem; line-height: 1;">🧪</div>
+                        <h3 style="font-size: 1.2rem; font-weight: 600; color: var(--primary); margin-bottom: 0.75rem;">Наука и инновации</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">Содействие проведению научных исследований, развитию доказательной медицины и внедрению инновационных реабилитационных технологий в практику.</p>
+                    </div>
+                    <!-- Goal 4 -->
+                    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm); transition: var(--transition);" class="card-hover-effect">
+                        <div style="font-size: 2rem; margin-bottom: 1rem; line-height: 1;">🏥</div>
+                        <h3 style="font-size: 1.2rem; font-weight: 600; color: var(--primary); margin-bottom: 0.75rem;">Качество реабилитации</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">Участие в разработке клинических рекомендаций, стандартов и нормативных документов, направленных на повышение качества медицинской реабилитации.</p>
+                    </div>
+                    <!-- Goal 5 -->
+                    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm); transition: var(--transition);" class="card-hover-effect">
+                        <div style="font-size: 2rem; margin-bottom: 1rem; line-height: 1;">🌍</div>
+                        <h3 style="font-size: 1.2rem; font-weight: 600; color: var(--primary); margin-bottom: 0.75rem;">Международные связи</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">Развитие отношений с международными профессиональными организациями, центрами и вузами для обмена опытом и интеграции достижений в РК.</p>
+                    </div>
+                    <!-- Goal 6 -->
+                    <div style="background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%); border: none; border-radius: var(--radius-md); padding: 2.5rem; color: white; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-md);" class="card-hover-effect">
+                        <div>
+                            <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.75rem; margin-top: 0;">Присоединяйтесь к нам</h3>
+                            <p style="font-size: 0.9rem; line-height: 1.6; opacity: 0.9; margin: 0;">Вместе мы строим эффективное междисциплинарное сообщество ради здоровья пациентов.</p>
+                        </div>
+                        <a href="{% url 'membership' %}" class="btn btn-primary" style="background: var(--accent); box-shadow: none; font-size: 0.9rem; padding: 0.6rem 1.2rem; margin-top: 1rem; border-radius: var(--radius-sm); color: white;">Стать членом КФФМР</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Structure -->
-            <div>
-                <h2 class="section-title" style="text-align: center; margin-bottom: 3.5rem; font-size: 2.25rem;">Организационная <strong>Структура</strong></h2>
-                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 4rem 2rem; box-shadow: var(--shadow-sm); text-align: center; max-width: 900px; margin: 0 auto;">
-                    
-                    <!-- Top Level -->
-                    <div style="background: var(--primary); color: white; padding: 1.25rem 2rem; border-radius: var(--radius-sm); display: inline-block; font-weight: 600; min-width: 250px; box-shadow: var(--shadow-sm); margin-bottom: 2rem;">
-                        Общее собрание членов КФФМР
-                    </div>
-                    
-                    <div style="width: 2px; height: 30px; background: var(--border); margin: 0 auto;"></div>
-                    
-                    <!-- Board -->
-                    <div style="background: var(--secondary); color: white; padding: 1.25rem 2rem; border-radius: var(--radius-sm); display: inline-block; font-weight: 600; min-width: 250px; box-shadow: var(--shadow-sm); margin-bottom: 2rem;">
-                        Правление КФФМР
-                    </div>
-
-                    <div style="width: 2px; height: 30px; background: var(--border); margin: 0 auto;"></div>
-
-                    <!-- President (Middle) -->
-                    <div style="border: 2px solid var(--accent); background: var(--background); padding: 1.5rem 2.5rem; border-radius: var(--radius-md); display: inline-block; min-width: 300px; box-shadow: var(--shadow-sm); margin-bottom: 2rem;">
-                        <span style="font-size: 0.85rem; font-weight: 700; color: var(--accent); uppercase tracking-wider; display: block; margin-bottom: 0.25rem;">Президент</span>
-                        <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--primary); margin-bottom: 0.25rem;">Галия Жанаспаева</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Главный внештатный реабилитолог МЗ РК</p>
-                    </div>
-
-                    <div style="width: 2px; height: 30px; background: var(--border); margin: 0 auto;"></div>
-
-                    <!-- Lower levels (grid) -->
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1rem;" class="structure-bottom-grid">
-                        <div style="background: var(--background); border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm); font-size: 0.95rem; font-weight: 500; color: var(--primary);">
-                            Секретариат
+            <!-- Directions & Activities -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 6rem; align-items: start;" class="directions-layout">
+                <div>
+                    <h2 style="font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 1.5rem; margin-top: 0; display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="width: 4px; height: 24px; background: var(--accent); display: inline-block; border-radius: 2px;"></span>
+                        Направления деятельности
+                    </h2>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem;">
+                        <li style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 1rem; color: var(--text-main); line-height: 1.6;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 0.25rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>организация научно-практических конференций, конгрессов, форумов и образовательных мероприятий;</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 1rem; color: var(--text-main); line-height: 1.6;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 0.25rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>содействие повышению квалификации специалистов;</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 1rem; color: var(--text-main); line-height: 1.6;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 0.25rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>поддержка научно-исследовательских проектов;</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 1rem; color: var(--text-main); line-height: 1.6;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 0.25rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>участие в разработке и совершенствовании стандартов оказания реабилитационной помощи;</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 1rem; color: var(--text-main); line-height: 1.6;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 0.25rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>развитие междисциплинарного взаимодействия специалистов;</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 1rem; color: var(--text-main); line-height: 1.6;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 0.25rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>популяризация современных подходов физической и реабилитационной медицины;</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 1rem; color: var(--text-main); line-height: 1.6;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 0.25rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>экспертная деятельность в области медицинской реабилитации;</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 1rem; color: var(--text-main); line-height: 1.6;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 0.25rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>развитие международного сотрудничества;</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 1rem; color: var(--text-main); line-height: 1.6;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 0.25rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>содействие внедрению инновационных методов диагностики, лечения и восстановления пациентов.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 3rem; box-shadow: var(--shadow-sm);">
+                    <h2 style="font-size: 1.75rem; font-weight: 700; color: var(--primary); margin-bottom: 2rem; margin-top: 0;">Наши ценности</h2>
+                    <div style="display: flex; flex-direction: column; gap: 2rem;">
+                        <!-- Value 1 -->
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="font-size: 1.5rem; padding: 0.5rem; background: var(--background); border-radius: 8px; line-height: 1; flex-shrink: 0;">💼</div>
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--primary); margin-bottom: 0.25rem; margin-top: 0;">Профессионализм</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0;">Следование высоким стандартам медицинской практики, образования и научной деятельности.</p>
+                            </div>
                         </div>
-                        <div style="background: var(--background); border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm); font-size: 0.95rem; font-weight: 500; color: var(--primary);">
-                            Экспертный совет
+                        <!-- Value 2 -->
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="font-size: 1.5rem; padding: 0.5rem; background: var(--background); border-radius: 8px; line-height: 1; flex-shrink: 0;">❤️</div>
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--primary); margin-bottom: 0.25rem; margin-top: 0;">Пациентоориентированность</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0;">Признание интересов и потребностей пациента ключевым приоритетом реабилитационной помощи.</p>
+                            </div>
                         </div>
-                        <div style="background: var(--background); border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm); font-size: 0.95rem; font-weight: 500; color: var(--primary);">
-                            Региональные филиалы
+                        <!-- Value 3 -->
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="font-size: 1.5rem; padding: 0.5rem; background: var(--background); border-radius: 8px; line-height: 1; flex-shrink: 0;">🔬</div>
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--primary); margin-bottom: 0.25rem; margin-top: 0;">Научная обоснованность</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0;">Применение принципов доказательной медицины и современных научных достижений.</p>
+                            </div>
+                        </div>
+                        <!-- Value 4 -->
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="font-size: 1.5rem; padding: 0.5rem; background: var(--background); border-radius: 8px; line-height: 1; flex-shrink: 0;">🤝</div>
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--primary); margin-bottom: 0.25rem; margin-top: 0;">Сотрудничество</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0;">Развитие междисциплинарного взаимодействия и партнерства на национальном и международном уровнях.</p>
+                            </div>
+                        </div>
+                        <!-- Value 5 -->
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="font-size: 1.5rem; padding: 0.5rem; background: var(--background); border-radius: 8px; line-height: 1; flex-shrink: 0;">📈</div>
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--primary); margin-bottom: 0.25rem; margin-top: 0;">Непрерывное развитие</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0;">Постоянное совершенствование профессиональных знаний и компетенций специалистов.</p>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
+            <!-- Leadership of the Federation -->
+            <div style="margin-bottom: 6rem;">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <span style="font-size: 0.85rem; font-weight: 700; color: var(--secondary); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 0.5rem;">Лица организации</span>
+                    <h2 style="font-size: 2.25rem; font-weight: 700; color: var(--primary); margin: 0;">Руководство <strong>Федерации</strong></h2>
+                    <div style="width: 40px; height: 3px; background: var(--accent); border-radius: 2px; margin: 1rem auto 0;"></div>
+                </div>
+
+                <!-- President Highlight Card -->
+                <div style="max-width: 800px; margin: 0 auto 4rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 3rem; box-shadow: var(--shadow-sm); display: grid; grid-template-columns: 220px 1fr; gap: 3rem; align-items: center;" class="pres-highlight-card">
+                    <div style="border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); aspect-ratio: 1/1; background: #e2e8f0; width: 220px; height: 220px;">
+                        <img src="{% static 'images/president_photo.png' %}" alt="Жанаспаева Галия Амангазиевна" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div>
+                        <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 0.5rem;">Президент КФФМР</span>
+                        <h3 style="font-size: 1.8rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; margin-top: 0; line-height: 1.2;">Жанаспаева Галия Амангазиевна</h3>
+                        <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem; margin-top: 0;">Президент Казахстанской Федерации физической медицины и реабилитации, Главный внештатный реабилитолог Министерства здравоохранения РК.</p>
+                        <a href="{% url 'index' %}" style="font-size: 0.95rem; font-weight: 600; color: var(--secondary); display: inline-flex; align-items: center; gap: 0.25rem;">Приветственное слово &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Board Members Grid -->
+                <div>
+                    <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--primary); text-align: center; margin-bottom: 2rem; margin-top: 0;">Члены Федерации</h3>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem;">
+                        <!-- Member 1 -->
+                        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; display: flex; align-items: center; gap: 1rem; transition: var(--transition);" class="member-card">
+                            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(0, 119, 204, 0.05); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; flex-shrink: 0;">Ш</div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--primary); font-size: 0.95rem; line-height: 1.3;">Шевелева Наиля Игоревна</div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Член КФФМР / Специалист</div>
+                            </div>
+                        </div>
+                        <!-- Member 2 -->
+                        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; display: flex; align-items: center; gap: 1rem; transition: var(--transition);" class="member-card">
+                            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(0, 119, 204, 0.05); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; flex-shrink: 0;">С</div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--primary); font-size: 0.95rem; line-height: 1.3;">Сейданова Амина Багдадовна</div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Член КФФМР / Специалист</div>
+                            </div>
+                        </div>
+                        <!-- Member 3 -->
+                        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; display: flex; align-items: center; gap: 1rem; transition: var(--transition);" class="member-card">
+                            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(0, 119, 204, 0.05); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; flex-shrink: 0;">И</div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--primary); font-size: 0.95rem; line-height: 1.3;">Ибраева Ольга Шардарбековна</div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Член КФФМР / Специалист</div>
+                            </div>
+                        </div>
+                        <!-- Member 4 -->
+                        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; display: flex; align-items: center; gap: 1rem; transition: var(--transition);" class="member-card">
+                            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(0, 119, 204, 0.05); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; flex-shrink: 0;">Т</div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--primary); font-size: 0.95rem; line-height: 1.3;">Тюлебаева Арна Берикбековна</div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Член КФФМР / Специалист</div>
+                            </div>
+                        </div>
+                        <!-- Member 5 -->
+                        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; display: flex; align-items: center; gap: 1rem; transition: var(--transition);" class="member-card">
+                            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(0, 119, 204, 0.05); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; flex-shrink: 0;">А</div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--primary); font-size: 0.95rem; line-height: 1.3;">Аймакова Гульсим Таргыновна</div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Член КФФМР / Специалист</div>
+                            </div>
+                        </div>
+                        <!-- Member 6 -->
+                        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; display: flex; align-items: center; gap: 1rem; transition: var(--transition);" class="member-card">
+                            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(0, 119, 204, 0.05); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; flex-shrink: 0;">Д</div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--primary); font-size: 0.95rem; line-height: 1.3;">Дубохивин Александр Александрович</div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Член КФФМР / Специалист</div>
+                            </div>
+                        </div>
+                        <!-- Member 7 -->
+                        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; display: flex; align-items: center; gap: 1rem; transition: var(--transition);" class="member-card">
+                            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(0, 119, 204, 0.05); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; flex-shrink: 0;">Х</div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--primary); font-size: 0.95rem; line-height: 1.3;">Хамметова Балнур Жанатовна</div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Член КФФМР / Специалист</div>
+                            </div>
+                        </div>
+                        <!-- Member 8 -->
+                        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; display: flex; align-items: center; gap: 1rem; transition: var(--transition);" class="member-card">
+                            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(0, 119, 204, 0.05); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; flex-shrink: 0;">Б</div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--primary); font-size: 0.95rem; line-height: 1.3;">Беляев Руслан Андреевич</div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Член КФФМР / Специалист</div>
+                            </div>
+                        </div>
+                        <!-- Member 9 -->
+                        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; display: flex; align-items: center; gap: 1rem; transition: var(--transition);" class="member-card">
+                            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(0, 119, 204, 0.05); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; flex-shrink: 0;">С</div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--primary); font-size: 0.95rem; line-height: 1.3;">Сорокина Елена Федоровна</div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Член КФФМР / Специалист</div>
+                            </div>
+                        </div>
+                        <!-- Member 10 -->
+                        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; display: flex; align-items: center; gap: 1rem; transition: var(--transition);" class="member-card">
+                            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(0, 119, 204, 0.05); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; flex-shrink: 0;">И</div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--primary); font-size: 0.95rem; line-height: 1.3;">Иванова Галина Генадиевна</div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Член КФФМР / Специалист</div>
+                            </div>
+                        </div>
+                        <!-- Member 11 -->
+                        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; display: flex; align-items: center; gap: 1rem; transition: var(--transition);" class="member-card">
+                            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(0, 119, 204, 0.05); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; flex-shrink: 0;">Б</div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--primary); font-size: 0.95rem; line-height: 1.3;">Баширова Газиза Рахимжановна</div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Член КФФМР / Специалист</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- International Cooperation -->
+            <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; border-radius: var(--radius-lg); padding: 4rem; box-shadow: var(--shadow-lg); overflow: hidden; position: relative;">
+                <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255, 255, 255, 0.05);"></div>
+                <div style="max-width: 800px; position: relative; z-index: 2;">
+                    <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent); text-transform: uppercase; tracking-wider; display: block; margin-bottom: 0.75rem;">Глобальные ориентиры</span>
+                    <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.3; margin-top: 0;">Международное сотрудничество</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.7; opacity: 0.9; margin-bottom: 2rem; margin-top: 0;">
+                        Казахстанская Федерация физической медицины и реабилитации стремится к активному взаимодействию с международными профессиональными обществами, образовательными учреждениями и научными организациями для развития современной реабилитационной медицины и интеграции Казахстана в мировое профессиональное сообщество.
+                    </p>
+                    <div style="border-top: 1px solid rgba(255, 255, 255, 0.15); padding-top: 1.5rem; font-style: italic; font-size: 1.05rem; color: rgba(255, 255, 255, 0.8); display: flex; align-items: center; gap: 0.75rem;">
+                        <span>🤝</span>
+                        <span>Вместе мы развиваем реабилитацию будущего!</span>
+                    </div>
                 </div>
             </div>
 
@@ -115,22 +348,41 @@
 </main>
 
 <style>
-    .goal-card:hover {
+    .card-hover-effect:hover {
         transform: translateY(-5px);
         box-shadow: var(--shadow-lg) !important;
         border-color: var(--secondary) !important;
     }
+    .member-card:hover {
+        transform: scale(1.02);
+        border-color: var(--accent) !important;
+        box-shadow: var(--shadow-sm);
+    }
     @media (max-width: 992px) {
-        .split-section {
+        .mv-grid {
             grid-template-columns: 1fr !important;
             gap: 2rem !important;
         }
-        .goals-grid {
+        .goals-grid-three {
+            grid-template-columns: 1fr 1fr !important;
+        }
+        .directions-layout {
+            grid-template-columns: 1fr !important;
+            gap: 3rem !important;
+        }
+        .pres-highlight-card {
+            grid-template-columns: 1fr !important;
+            text-align: center;
+            justify-items: center;
+            gap: 2rem !important;
+        }
+    }
+    @media (max-width: 600px) {
+        .goals-grid-three {
             grid-template-columns: 1fr !important;
         }
-        .structure-bottom-grid {
-            grid-template-columns: 1fr !important;
-            gap: 1rem !important;
+        .about-hero h1 {
+            font-size: 2.25rem !important;
         }
     }
 </style>

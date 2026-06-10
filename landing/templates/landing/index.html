@@ -36,25 +36,28 @@
     </div>
 
     <!-- President Welcome Section -->
-    <section class="president-welcome-section">
-        <div class="container president-container">
-            <div class="president-photo-wrapper">
-                <img src="{% static 'images/president_photo.png' %}" alt="Галия Жанаспаева" class="president-photo">
+    <section class="president-welcome-section" style="padding: 6rem 0; background: var(--surface); border-bottom: 1px solid var(--border);">
+        <div class="container president-container" style="display: grid; grid-template-columns: 0.82fr 1.18fr; gap: 4rem; align-items: flex-start;">
+            <div class="president-photo-wrapper" style="position: sticky; top: 100px;">
+                <img src="{% static 'images/president_photo.png' %}" alt="Жанаспаева Галия Амангазиевна" class="president-photo">
             </div>
             <div>
-                <span class="hero-tag" style="background: rgba(0, 119, 204, 0.05); border: 1px solid rgba(0, 119, 204, 0.1); color: var(--secondary); margin-bottom: 1.5rem; display: inline-block;">Обращение президента</span>
-                <h2 style="font-size: 2.25rem; font-weight: 700; color: var(--primary); margin-bottom: 1.5rem;">Добро пожаловать!</h2>
-                <div class="president-quote">
-                    «Инновационные роботизированные системы, цифровая диагностика и экзоскелеты становятся повседневными инструментами врачей, возвращая пациентам свободу движения и надежду на полноценную жизнь».
+                <span class="hero-tag" style="background: rgba(0, 119, 204, 0.05); border: 1px solid rgba(0, 119, 204, 0.1); color: var(--secondary); margin-bottom: 1.5rem; display: inline-block;">Приветственное слово</span>
+                <h2 style="font-size: 2.25rem; font-weight: 700; color: var(--primary); margin-bottom: 1rem; line-height: 1.3;">Приветствие Президента КФФМР</h2>
+                
+                <h3 style="font-size: 1.3rem; font-weight: 600; color: var(--secondary); margin-bottom: 1.5rem;">Уважаемые коллеги!</h3>
+                
+                <div style="font-size: 1.05rem; color: var(--text-main); line-height: 1.8; display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 2.5rem;">
+                    <p>Рада приветствовать вас на официальном сайте Казахстанской Федерации физической медицины и реабилитации.</p>
+                    <p>Сегодня медицинская реабилитация является одним из важнейших направлений современного здравоохранения. Увеличение продолжительности жизни, рост числа пациентов, перенесших инсульт, травмы, хирургические вмешательства и тяжелые заболевания, требуют постоянного совершенствования системы реабилитационной помощи и подготовки высококвалифицированных специалистов.</p>
+                    <p>На пути становления и совершенствования реабилитационной службы Республики Казахстан возникла необходимость создания профессионального объединения, способного консолидировать специалистов, заинтересованных в развитии отрасли. Именно поэтому была создана Казахстанская Федерация физической медицины и реабилитации, объединившая единомышленников, стремящихся к профессиональному росту, совершенствованию практических навыков, повышению уровня знаний и развитию современной реабилитационной медицины в нашей стране.</p>
+                    <p>Мы убеждены, что непрерывное образование, обмен опытом, развитие научной деятельности и внедрение международных стандартов являются основой качественной реабилитационной помощи. В конечном итоге наша общая работа направлена на улучшение качества жизни пациентов, повышение их функциональной независимости и снижение уровня инвалидизации населения.</p>
                 </div>
-                <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
-                    Наша Федерация объединяет ведущих специалистов Казахстана для внедрения передовых роботизированных технологий и повышения стандартов физической медицины и реабилитации. Наша общая миссия — создать доступную и эффективную реабилитационную среду в каждом уголке нашей страны.
-                </p>
-                <div style="font-weight: 700; color: var(--primary); font-size: 1.1rem; line-height: 1.4;">
-                    Галия Жанаспаева
-                </div>
-                <div style="color: var(--accent); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.25rem;">
-                    Президент КФФМР, Главный внештатный реабилитолог МЗ РК
+
+                <div style="border-top: 1px solid var(--border); padding-top: 1.5rem; display: flex; flex-direction: column; gap: 0.25rem;">
+                    <span style="color: var(--text-muted); font-size: 0.95rem; font-style: italic;">С уважением,</span>
+                    <strong style="font-size: 1.25rem; color: var(--primary); font-weight: 700;">Жанаспаева Галия Амангазиевна</strong>
+                    <span style="font-size: 0.85rem; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Президент Казахстанской Федерации физической медицины и реабилитации</span>
                 </div>
             </div>
         </div>
